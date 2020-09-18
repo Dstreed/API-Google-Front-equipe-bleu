@@ -1,6 +1,10 @@
 import React from "react";
 
-const FontSize = () => {
+const FontSize = ({ size, setSize }) => {
+  const handleSizeChange = (e) => {
+    setSize(e.target.value);
+  };
+
   return (
     <>
       <label htmlFor="range" className="form-label">
@@ -13,6 +17,8 @@ const FontSize = () => {
         min="8"
         max="48"
         step="1"
+        value={size}
+        onChange={handleSizeChange}
       ></input>
     </>
   );
