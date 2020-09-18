@@ -1,12 +1,12 @@
 import React from "react";
-import Articles from "./Articles";
 import GoogleUseEffect from "./GoogleUseEffect";
 import GoogleFontLoader from "react-google-font-loader";
+import Articles from "./Articles";
 
 const Fonts = (props) => {
-  const { id, text, size, title, sort = "date" } = props;
-  const { fonts } = GoogleUseEffect(sort);
-
+  const { id, text, size, title, font = "date" } = props;
+  const { fonts } = GoogleUseEffect(font);
+  console.log(GoogleUseEffect);
   return (
     <>
       <section className="row mb-5 ">
